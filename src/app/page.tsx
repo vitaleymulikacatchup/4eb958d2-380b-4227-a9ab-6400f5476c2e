@@ -40,7 +40,7 @@ export default function Home() {
       <TokenBillboardHero {...heroProps} />
       <SplitAbout {...aboutProps} />
       <YearRoadmapTimeline items={[]} title="Booking Process" />
-      <CtaAbout title="Ready to Capture Your Moments?" descriptions={["Book your shoot today!"]} />
+      <CtaAbout title="Ready to Capture Your Moments?" descriptions={['Book your shoot today!']} />
     </>
   );
 }
