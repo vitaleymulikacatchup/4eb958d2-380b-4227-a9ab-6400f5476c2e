@@ -1,10 +1,9 @@
 "use client";
-import { YearRoadmapTimeline } from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';
 import { TokenBillboardHero } from '@/components/sections/layouts/hero/TokenBillboardHero';
 import { SplitAbout } from '@/components/sections/layouts/about/SplitAbout';
-import { Tokenomics } from '@/components/sections/layouts/tokenomics/TextGridTokenomics';
 import { CtaAbout } from '@/components/sections/layouts/about/CtaAbout';
 import { NavbarBase } from '@/components/navigation/NavbarBase';
+import { YearRoadmapTimeline } from '@/components/sections/layouts/roadmap/YearRoadmapTimeline';
 
 const NavbarLinks = [
   { name: 'Hero', id: 'hero' },
@@ -28,31 +27,6 @@ export default function Home() {
     body: 'Passionate about capturing life’s fleeting moments through the lens of a camera. My work is driven by the belief that every image tells a story, and I strive to tell yours.',
   };
 
-  const howToBookItems = [
-    {
-      title: 'Step 1: Check Availability',
-      description: 'Visit the booking page to see available slots.',
-    },
-    {
-      title: 'Step 2: Inquiry',
-      description: 'Fill out the inquiry form to get in touch.',
-    },
-    {
-      title: 'Step 3: Confirmation',
-      description: 'Receive a confirmation email with your booking details.',
-    },
-  ];
-
-  const tokenomicsProps = {
-    title: 'Pricing Options',
-    description: 'Explore our different photography packages:',
-    tokenData: [
-      { label: 'Standard Shoot', value: '$300' },
-      { label: 'Premium Shoot', value: '$500' },
-      { label: 'Event Package', value: '$1000' },
-    ],
-  };
-
   return (
     <>
       <NavbarBase
@@ -65,8 +39,7 @@ export default function Home() {
       />
       <TokenBillboardHero {...heroProps} />
       <SplitAbout {...aboutProps} />
-      <YearRoadmapTimeline items={howToBookItems} title="Booking Process" />
-      <Tokenomics {...tokenomicsProps} />
+      <YearRoadmapTimeline items={[]} title="Booking Process" />
       <CtaAbout title="Ready to Capture Your Moments?" descriptions={["Book your shoot today!"]} />
     </>
   );
